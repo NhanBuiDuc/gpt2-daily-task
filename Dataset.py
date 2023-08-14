@@ -89,7 +89,7 @@ class DailyTaskSequenceData(Dataset):
         # Add start and end of string tokens to the prompt and result strings
         input = "<startofstring><startofprompt>" + prompt + "<endofpromt><endofstring>"
         result_str = "<startofstring><startofprompt>" + prompt + "<endofpromt><startoftask>" + result_str + "<endoftask><endofstring>"
-        input_encoded = self.tokenizer(input, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
+        input_encoded = self.tokenizer(input, max_length=50, truncation=True, padding="max_length", return_tensors="pt")
         output_encoded = self.tokenizer(result_str, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
 
         input_ids = input_encoded['input_ids']

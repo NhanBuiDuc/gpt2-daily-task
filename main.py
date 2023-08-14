@@ -21,8 +21,8 @@ def train(chatData, model, optim, max_length, temperature):
             
             # Generate text with temperature and top-k sampling
             output = model.generate(
-                X.squeeze(0),
-                attention_mask=a.squeeze(0),
+                X.squeeze(1),
+                attention_mask=a.squeeze(1),
                 max_length=max_length,
                 temperature=temperature,
                 top_k=50,
@@ -83,7 +83,7 @@ model.resize_token_embeddings(len(tokenizer))
 model = model.to(device)
 
 dailyTaskData = DailyTaskSequenceData("./daily_task_data.json", tokenizer)
-dailyTaskDataLoader = DataLoader(dailyTaskData, batch_size=1)
+dailyTaskDataLoader = DataLoader(dailyTaskData, batch_size=20)
 
 model.train()
 
