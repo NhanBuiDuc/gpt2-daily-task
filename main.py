@@ -42,7 +42,7 @@ def train(chatData, model, optim, max_length, temperature):
 def infer(entry, max_length):
     prompt = entry["prompt"]
     input_text = f"<startofstring><startofprompt>{prompt}<endofpromt><endofstring>"
-    input_encoded = tokenizer(input_text, max_length=300, truncation=True, padding="max_length", return_tensors="pt")
+    input_encoded = tokenizer(input_text, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
     input_ids = input_encoded['input_ids'].to("cuda")
     attention_mask = input_encoded['attention_mask'].to("cuda")
     
@@ -91,7 +91,7 @@ optim = Adam(model.parameters(), lr=1e-2)
 
 print("training .... ")
 temperature = 0.2
-max_length = 500
+max_length = 100
 train(dailyTaskDataLoader, model, optim, max_length, temperature)
 
 print("infer from model : ")
