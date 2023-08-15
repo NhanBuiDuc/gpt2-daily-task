@@ -116,12 +116,11 @@ class DailyTaskSequenceData(Dataset):
         entry = self.data[idx]
         prompt = entry['input_text']
         target = entry['target_text']
-
+        merge = "<startofstring>" + prompt + target + "<endofstring>"
         # Encode the prompt
         input_encoding = self.tokenizer(
             prompt,
             max_length=50,  # Adjust as needed
-            padding="max_length",
             return_tensors="pt",
             truncation=True
         )
@@ -129,18 +128,29 @@ class DailyTaskSequenceData(Dataset):
         # Encode the target
         target_encoding = self.tokenizer(
             target,
-            max_length=100,  # Adjust as needed
-            padding="max_length",
+            max_length=50,  # Adjust as needed
             return_tensors="pt",
             truncation=True
         )
-
+        # Encode the target
+        merge_encoding = self.tokenizer(
+            merge,
+            max_length=50,  # Adjust as needed
+            return_tensors="pt",
+            truncation=True
+        )
         input_ids = input_encoding['input_ids']
         attention_mask = input_encoding['attention_mask']
         labels = target_encoding['input_ids']  # Use 'input_ids' for language modeling
-
+        merge_ids = merge_encoding['input_ids']
+        attention_mask = merge_encoding['attention_mask']
+        # return {
+        #     "input_ids": input_ids,
+        #     "attention_mask": attention_mask,
+        #     "labels": labels
+        # }
         return {
-            "input_ids": input_ids,
-            "attention_mask": attention_mask,
-            "labels": labels
+            "input_ids": merge_ids,
+            # "attention_mask": attention_mask,
+            # "labels": target
         }

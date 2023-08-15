@@ -92,7 +92,8 @@ def infer(entry, max_length):
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 custom_tokens = [
-    "<startofprompt>", "<startoftask>","<endofpromt>", "<endoftask>", 
+    "<startofprompt>", "<startoftask>",
+    "<endofpromt>", "<endoftask>", 
     "<sum>", "<totd>", "<spec_time>", "<prio>", "<status>", "<cate>", 
     "<diff>", "<imp>", "<exp_min>", "<deadline>"
 ]
@@ -121,10 +122,5 @@ optim = Adam(model.parameters(), lr=1e-2)
 
 print("training .... ")
 temperature = 0.2
-max_length = 100
+max_length = 50
 train(dailyTaskDataset, model, max_length, temperature)
-
-print("infer from model : ")
-
-response = infer(input_entry)
-print(response)
