@@ -23,7 +23,7 @@ model = GPT2LMHeadModel.from_pretrained("gpt2")
 model.resize_token_embeddings(len(tokenizer))
 
 # Load trained model state
-model.load_state_dict(torch.load("model_state.pt", map_location=torch.device('cpu')))
+model.load_state_dict(torch.load("./output/checkpoint-710/pytorch_model.bin", map_location=torch.device('cuda')))
 model.eval()
 
 # Example usage
@@ -31,17 +31,36 @@ input_entry = {
     "prompt": "Prepare presentation for tomorrow's conference",
 }
 
-def infer(entry):
+def infer(entry, max_length):
     prompt = entry["prompt"]
-    input_text = f"<startofstring><startofprompt>{prompt}<endofpromt><endofstring>"
-    input_encoded = tokenizer(input_text, max_length=500, truncation=True, padding="max_length", return_tensors="pt")
-    input_ids = input_encoded['input_ids']
-    attention_mask = input_encoded['attention_mask']
-    output = model.generate(input_ids, attention_mask=attention_mask)
-    generated_text = tokenizer.decode(output[0], skip_special_tokens=False)
-
+    input_text = "<startofstring>" + prompt # Use the raw prompt string
+    input_encoded = tokenizer(input_text, max_length=200, truncation=False, return_tensors="pt")
+    input_ids = input_encoded['input_ids'].to(device)  # Move to the appropriate device
+    attention_mask = input_encoded['attention_mask'].to(device)  # Move to the appropriate device
+    
+    # Generate text with temperature and top-k sampling
+    temperature = 0.2  # Adjust this value
+    top_k = 50  # Adjust this value
+    output = model.generate(
+        input_ids,
+        attention_mask=attention_mask,
+        max_length=max_length,
+        temperature=temperature,
+        top_k=top_k,
+    )
+    generated_text = tokenizer.decode(output[0], skip_special_tokens=False)  # Skip special tokens
+    
     return generated_text
 
-if __name__ == "__main__":
-    response = infer(input_entry)
-    print(response)
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model.to(device)
+
+input_entry = {
+    "prompt": "Prepare presentation for tomorrow's conference",
+}
+
+max_length = 100  # Adjust this value
+
+response = infer(input_entry, max_length)
+print(response)
+

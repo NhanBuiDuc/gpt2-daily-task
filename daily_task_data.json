@@ -1,222 +1,222 @@
 [
   {
-    "prompt": "Prepare presentation for tomorrow's conference",
-    "result": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
+    "input_text": "Prepare presentation for tomorrow's conference",
+    "target_text": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
   },
   {
-    "prompt": "Finish coding assignment before evening",
-    "result": "<sum>Finish coding assignment<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
+    "input_text": "Finish coding assignment before evening",
+    "target_text": "<sum>Finish coding assignment<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
   },
   {
-    "prompt": "Buy groceries after work",
-    "result": "<sum>Buy groceries<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Errands<diff>easy<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Buy groceries after work",
+    "target_text": "<sum>Buy groceries<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Errands<diff>easy<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Write a blog post about machine learning by tonight",
-    "result": "<sum>Write a blog post<totd>night<spec_time>null<prio>high<status>not completed<cate>Writing<diff>medium<imp>high<exp_min>90<deadline>720"
+    "input_text": "Write a blog post about machine learning by tonight",
+    "target_text": "<sum>Write a blog post<totd>night<spec_time>null<prio>high<status>not completed<cate>Writing<diff>medium<imp>high<exp_min>90<deadline>720"
   },
   {
-    "prompt": "Complete workout session in the morning",
-    "result": "<sum>Complete workout session<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Health<diff>medium<imp>medium<exp_min>45<deadline>null"
+    "input_text": "Complete workout session in the morning",
+    "target_text": "<sum>Complete workout session<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Health<diff>medium<imp>medium<exp_min>45<deadline>null"
   },
   {
-    "prompt": "Attend team meeting and provide project update",
-    "result": "<sum>Attend team meeting<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>low<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Attend team meeting and provide project update",
+    "target_text": "<sum>Attend team meeting<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>low<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Practice guitar for upcoming gig",
-    "result": "<sum>Practice guitar<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>90<deadline>null"
+    "input_text": "Practice guitar for upcoming gig",
+    "target_text": "<sum>Practice guitar<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>90<deadline>null"
   },
   {
-    "prompt": "Call family to wish happy birthday",
-    "result": "<sum>Call family<totd>evening<spec_time>null<prio>low<status>not completed<cate>Personal<diff>easy<imp>medium<exp_min>15<deadline>null"
+    "input_text": "Call family to wish happy birthday",
+    "target_text": "<sum>Call family<totd>evening<spec_time>null<prio>low<status>not completed<cate>Personal<diff>easy<imp>medium<exp_min>15<deadline>null"
   },
   {
-    "prompt": "Research new recipes for dinner",
-    "result": "<sum>Research new recipes<totd>morning<spec_time>null<prio>low<status>not completed<cate>Cooking<diff>easy<imp>low<exp_min>30<deadline>null"
+    "input_text": "Research new recipes for dinner",
+    "target_text": "<sum>Research new recipes<totd>morning<spec_time>null<prio>low<status>not completed<cate>Cooking<diff>easy<imp>low<exp_min>30<deadline>null"
   },
   {
-    "prompt": "Review and provide feedback on colleague's report",
-    "result": "<sum>Review and provide feedback<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>medium<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Review and provide feedback on colleague's report",
+    "target_text": "<sum>Review and provide feedback<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>medium<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Prepare presentation for tomorrow's conference",
-    "result": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
+    "input_text": "Prepare presentation for tomorrow's conference",
+    "target_text": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
   },
   {
-    "prompt": "Finish coding assignment before evening",
-    "result": "<sum>Finish coding assignment<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
+    "input_text": "Finish coding assignment before evening",
+    "target_text": "<sum>Finish coding assignment<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
   },
   {
-    "prompt": "Finish coding assignment before 5pm today",
-    "result": "<sum>Finish coding assignment<totd>evening<spec_time>5:00 PM<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
+    "input_text": "Finish coding assignment before 5pm today",
+    "target_text": "<sum>Finish coding assignment<totd>evening<spec_time>5:00 PM<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
   },
   {
-    "prompt": "Buy groceries after work",
-    "result": "<sum>Buy groceries<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Errands<diff>easy<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Buy groceries after work",
+    "target_text": "<sum>Buy groceries<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Errands<diff>easy<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Write a blog post about machine learning by tonight",
-    "result": "<sum>Write a blog post<totd>night<spec_time>10:00 PM<prio>high<status>not completed<cate>Writing<diff>medium<imp>high<exp_min>90<deadline>720"
+    "input_text": "Write a blog post about machine learning by tonight",
+    "target_text": "<sum>Write a blog post<totd>night<spec_time>10:00 PM<prio>high<status>not completed<cate>Writing<diff>medium<imp>high<exp_min>90<deadline>720"
   },
   {
-    "prompt": "Complete workout session in the morning",
-    "result": "<sum>Complete workout session<totd>morning<spec_time>7:00 AM<prio>medium<status>not completed<cate>Health<diff>medium<imp>medium<exp_min>45<deadline>null"
+    "input_text": "Complete workout session in the morning",
+    "target_text": "<sum>Complete workout session<totd>morning<spec_time>7:00 AM<prio>medium<status>not completed<cate>Health<diff>medium<imp>medium<exp_min>45<deadline>null"
   },
   {
-    "prompt": "Attend team meeting and provide project update",
-    "result": "<sum>Attend team meeting<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>low<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Attend team meeting and provide project update",
+    "target_text": "<sum>Attend team meeting<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>low<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Practice guitar for upcoming gig",
-    "result": "<sum>Practice guitar<totd>evening<spec_time>7:00 PM<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>90<deadline>null"
+    "input_text": "Practice guitar for upcoming gig",
+    "target_text": "<sum>Practice guitar<totd>evening<spec_time>7:00 PM<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>90<deadline>null"
   },
   {
-    "prompt": "Call family to wish happy birthday",
-    "result": "<sum>Call family<totd>evening<spec_time>null<prio>low<status>not completed<cate>Personal<diff>easy<imp>medium<exp_min>15<deadline>null"
+    "input_text": "Call family to wish happy birthday",
+    "target_text": "<sum>Call family<totd>evening<spec_time>null<prio>low<status>not completed<cate>Personal<diff>easy<imp>medium<exp_min>15<deadline>null"
   },
   {
-    "prompt": "Research new recipes for dinner",
-    "result": "<sum>Research new recipes<totd>morning<spec_time>9:00 AM<prio>low<status>not completed<cate>Cooking<diff>easy<imp>low<exp_min>30<deadline>null"
+    "input_text": "Research new recipes for dinner",
+    "target_text": "<sum>Research new recipes<totd>morning<spec_time>9:00 AM<prio>low<status>not completed<cate>Cooking<diff>easy<imp>low<exp_min>30<deadline>null"
   },
   {
-    "prompt": "Review and provide feedback on colleague's report",
-    "result": "<sum>Review and provide feedback<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>medium<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Review and provide feedback on colleague's report",
+    "target_text": "<sum>Review and provide feedback<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Work<diff>medium<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Buy groceries after work",
-    "result": "<sum>Buy groceries<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Errands<diff>easy<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Buy groceries after work",
+    "target_text": "<sum>Buy groceries<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Errands<diff>easy<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Complete workout session in the morning",
-    "result": "<sum>Complete workout session<totd>morning<spec_time>6:30 AM<prio>medium<status>not completed<cate>Health<diff>medium<imp>medium<exp_min>45<deadline>null"
+    "input_text": "Complete workout session in the morning",
+    "target_text": "<sum>Complete workout session<totd>morning<spec_time>6:30 AM<prio>medium<status>not completed<cate>Health<diff>medium<imp>medium<exp_min>45<deadline>null"
   },
   {
-    "prompt": "Attend team meeting and provide project update",
-    "result": "<sum>Attend team meeting<totd>afternoon<spec_time>2:00 PM<prio>medium<status>not completed<cate>Work<diff>low<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Attend team meeting and provide project update",
+    "target_text": "<sum>Attend team meeting<totd>afternoon<spec_time>2:00 PM<prio>medium<status>not completed<cate>Work<diff>low<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Practice guitar for upcoming gig",
-    "result": "<sum>Practice guitar<totd>evening<spec_time>8:30 PM<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>90<deadline>null"
+    "input_text": "Practice guitar for upcoming gig",
+    "target_text": "<sum>Practice guitar<totd>evening<spec_time>8:30 PM<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>90<deadline>null"
   },
   {
-    "prompt": "Call family to wish happy birthday",
-    "result": "<sum>Call family<totd>evening<spec_time>null<prio>low<status>not completed<cate>Personal<diff>easy<imp>medium<exp_min>15<deadline>null"
+    "input_text": "Call family to wish happy birthday",
+    "target_text": "<sum>Call family<totd>evening<spec_time>null<prio>low<status>not completed<cate>Personal<diff>easy<imp>medium<exp_min>15<deadline>null"
   },
   {
-    "prompt": "Research new recipes for dinner",
-    "result": "<sum>Research new recipes<totd>morning<spec_time>10:00 AM<prio>low<status>not completed<cate>Cooking<diff>easy<imp>low<exp_min>30<deadline>null"
+    "input_text": "Research new recipes for dinner",
+    "target_text": "<sum>Research new recipes<totd>morning<spec_time>10:00 AM<prio>low<status>not completed<cate>Cooking<diff>easy<imp>low<exp_min>30<deadline>null"
   },
   {
-    "prompt": "Review and provide feedback on colleague's report",
-    "result": "<sum>Review and provide feedback<totd>afternoon<spec_time>3:30 PM<prio>medium<status>not completed<cate>Work<diff>medium<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Review and provide feedback on colleague's report",
+    "target_text": "<sum>Review and provide feedback<totd>afternoon<spec_time>3:30 PM<prio>medium<status>not completed<cate>Work<diff>medium<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Prepare presentation for tomorrow's conference",
-    "result": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
+    "input_text": "Prepare presentation for tomorrow's conference",
+    "target_text": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
   },
   {
-    "prompt": "Finish coding assignment before evening",
-    "result": "<sum>Finish coding assignment<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
+    "input_text": "Finish coding assignment before evening",
+    "target_text": "<sum>Finish coding assignment<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Study<diff>hard<imp>high<exp_min>180<deadline>1080"
   },
   {
-    "prompt": "Attend online course on AI fundamentals",
-    "result": "<sum>Attend online course<totd>morning<spec_time>9:00 AM<prio>medium<status>not completed<cate>Education<diff>medium<imp>high<exp_min>90<deadline>720"
+    "input_text": "Attend online course on AI fundamentals",
+    "target_text": "<sum>Attend online course<totd>morning<spec_time>9:00 AM<prio>medium<status>not completed<cate>Education<diff>medium<imp>high<exp_min>90<deadline>720"
   },
   {
-    "prompt": "Create a marketing plan for the new product launch",
-    "result": "<sum>Create a marketing plan<totd>afternoon<spec_time>null<prio>high<status>not completed<cate>Business<diff>hard<imp>high<exp_min>150<deadline>1080"
+    "input_text": "Create a marketing plan for the new product launch",
+    "target_text": "<sum>Create a marketing plan<totd>afternoon<spec_time>null<prio>high<status>not completed<cate>Business<diff>hard<imp>high<exp_min>150<deadline>1080"
   },
   {
-    "prompt": "Practice meditation and mindfulness",
-    "result": "<sum>Practice meditation<totd>evening<spec_time>6:00 PM<prio>low<status>not completed<cate>Health<diff>easy<imp>medium<exp_min>30<deadline>null"
+    "input_text": "Practice meditation and mindfulness",
+    "target_text": "<sum>Practice meditation<totd>evening<spec_time>6:00 PM<prio>low<status>not completed<cate>Health<diff>easy<imp>medium<exp_min>30<deadline>null"
   },
   {
-    "prompt": "Meet with potential client for project discussion",
-    "result": "<sum>Meet with potential client<totd>afternoon<spec_time>2:30 PM<prio>high<status>not completed<cate>Business<diff>medium<imp>high<exp_min>60<deadline>null"
+    "input_text": "Meet with potential client for project discussion",
+    "target_text": "<sum>Meet with potential client<totd>afternoon<spec_time>2:30 PM<prio>high<status>not completed<cate>Business<diff>medium<imp>high<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Attend language class to learn Spanish",
-    "result": "<sum>Attend language class<totd>evening<spec_time>7:00 PM<prio>low<status>not completed<cate>Education<diff>medium<imp>medium<exp_min>75<deadline>720"
+    "input_text": "Attend language class to learn Spanish",
+    "target_text": "<sum>Attend language class<totd>evening<spec_time>7:00 PM<prio>low<status>not completed<cate>Education<diff>medium<imp>medium<exp_min>75<deadline>720"
   },
   {
-    "prompt": "Create a budget for your upcoming vacation",
-    "result": "<sum>Create a budget<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Finance<diff>medium<imp>medium<exp_min>60<deadline>720"
+    "input_text": "Create a budget for your upcoming vacation",
+    "target_text": "<sum>Create a budget<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Finance<diff>medium<imp>medium<exp_min>60<deadline>720"
   },
   {
-    "prompt": "Organize your closet and donate unused clothes",
-    "result": "<sum>Organize your closet<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Organizing<diff>easy<imp>medium<exp_min>90<deadline>null"
+    "input_text": "Organize your closet and donate unused clothes",
+    "target_text": "<sum>Organize your closet<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Organizing<diff>easy<imp>medium<exp_min>90<deadline>null"
   },
   {
-    "prompt": "Plan a surprise party for your best friend's birthday",
-    "result": "<sum>Plan a surprise party<totd>evening<spec_time>6:00 PM<prio>high<status>not completed<cate>Celebration<diff>hard<imp>high<exp_min>120<deadline>1440"
+    "input_text": "Plan a surprise party for your best friend's birthday",
+    "target_text": "<sum>Plan a surprise party<totd>evening<spec_time>6:00 PM<prio>high<status>not completed<cate>Celebration<diff>hard<imp>high<exp_min>120<deadline>1440"
   },
   {
-    "prompt": "Explore a new hiking trail in your local area",
-    "result": "<sum>Explore a new hiking trail<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Outdoor<diff>medium<imp>medium<exp_min>120<deadline>null"
+    "input_text": "Explore a new hiking trail in your local area",
+    "target_text": "<sum>Explore a new hiking trail<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Outdoor<diff>medium<imp>medium<exp_min>120<deadline>null"
   },
   {
-    "prompt": "Learn to cook a traditional dish from a foreign cuisine",
-    "result": "<sum>Learn to cook a traditional dish<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Cooking<diff>medium<imp>medium<exp_min>90<deadline>720"
+    "input_text": "Learn to cook a traditional dish from a foreign cuisine",
+    "target_text": "<sum>Learn to cook a traditional dish<totd>afternoon<spec_time>null<prio>medium<status>not completed<cate>Cooking<diff>medium<imp>medium<exp_min>90<deadline>720"
   },
   {
-    "prompt": "Volunteer at a local animal shelter for an afternoon",
-    "result": "<sum>Volunteer at a local animal shelter<totd>afternoon<spec_time>1:00 PM<prio>medium<status>not completed<cate>Volunteering<diff>easy<imp>medium<exp_min>120<deadline>null"
+    "input_text": "Volunteer at a local animal shelter for an afternoon",
+    "target_text": "<sum>Volunteer at a local animal shelter<totd>afternoon<spec_time>1:00 PM<prio>medium<status>not completed<cate>Volunteering<diff>easy<imp>medium<exp_min>120<deadline>null"
   },
   {
-    "prompt": "Design a logo for your friend's startup company",
-    "result": "<sum>Design a logo<totd>evening<spec_time>null<prio>high<status>not completed<cate>Creative<diff>hard<imp>high<exp_min>180<deadline>1080"
+    "input_text": "Design a logo for your friend's startup company",
+    "target_text": "<sum>Design a logo<totd>evening<spec_time>null<prio>high<status>not completed<cate>Creative<diff>hard<imp>high<exp_min>180<deadline>1080"
   },
   {
-    "prompt": "Start reading a new book on personal development",
-    "result": "<sum>Start reading a new book<totd>morning<spec_time>null<prio>low<status>not completed<cate>Self-improvement<diff>easy<imp>medium<exp_min>30<deadline>null"
+    "input_text": "Start reading a new book on personal development",
+    "target_text": "<sum>Start reading a new book<totd>morning<spec_time>null<prio>low<status>not completed<cate>Self-improvement<diff>easy<imp>medium<exp_min>30<deadline>null"
   },
   {
-    "prompt": "Learn to dance salsa with an online tutorial",
-    "result": "<sum>Learn to dance salsa<totd>evening<spec_time>8:30 PM<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>60<deadline>720"
+    "input_text": "Learn to dance salsa with an online tutorial",
+    "target_text": "<sum>Learn to dance salsa<totd>evening<spec_time>8:30 PM<prio>medium<status>not completed<cate>Hobby<diff>medium<imp>high<exp_min>60<deadline>720"
   },
   {
-    "prompt": "Write a heartfelt letter to a family member",
-    "result": "<sum>Write a heartfelt letter<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Personal<diff>medium<imp>low<exp_min>45<deadline>null"
+    "input_text": "Write a heartfelt letter to a family member",
+    "target_text": "<sum>Write a heartfelt letter<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Personal<diff>medium<imp>low<exp_min>45<deadline>null"
   },
   {
-    "prompt": "Explore a nearby museum and learn about its exhibits",
-    "result": "<sum>Explore a nearby museum<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Culture<diff>easy<imp>medium<exp_min>120<deadline>1440"
+    "input_text": "Explore a nearby museum and learn about its exhibits",
+    "target_text": "<sum>Explore a nearby museum<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Culture<diff>easy<imp>medium<exp_min>120<deadline>1440"
   },
   {
-    "prompt": "Start a small garden on your balcony or windowsill",
-    "result": "<sum>Start a small garden<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Gardening<diff>medium<imp>medium<exp_min>90<deadline>null"
+    "input_text": "Start a small garden on your balcony or windowsill",
+    "target_text": "<sum>Start a small garden<totd>afternoon<spec_time>null<prio>low<status>not completed<cate>Gardening<diff>medium<imp>medium<exp_min>90<deadline>null"
   },
   {
-    "prompt": "Plan a DIY home improvement project for the weekend",
-    "result": "<sum>Plan a DIY home improvement project<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Home Improvement<diff>hard<imp>high<exp_min>180<deadline>1080"
+    "input_text": "Plan a DIY home improvement project for the weekend",
+    "target_text": "<sum>Plan a DIY home improvement project<totd>evening<spec_time>null<prio>medium<status>not completed<cate>Home Improvement<diff>hard<imp>high<exp_min>180<deadline>1080"
   },
   {
-    "prompt": "Visit a local farmers' market and try new foods",
-    "result": "<sum>Visit a local farmers' market<totd>morning<spec_time>null<prio>low<status>not completed<cate>Food<diff>easy<imp>medium<exp_min>60<deadline>null"
+    "input_text": "Visit a local farmers' market and try new foods",
+    "target_text": "<sum>Visit a local farmers' market<totd>morning<spec_time>null<prio>low<status>not completed<cate>Food<diff>easy<imp>medium<exp_min>60<deadline>null"
   },
   {
-    "prompt": "Host a themed movie night for your friends at home",
-    "result": "<sum>Host a themed movie night<totd>evening<spec_time>7:00 PM<prio>medium<status>not completed<cate>Entertainment<diff>medium<imp>high<exp_min>120<deadline>1440"
+    "input_text": "Host a themed movie night for your friends at home",
+    "target_text": "<sum>Host a themed movie night<totd>evening<spec_time>7:00 PM<prio>medium<status>not completed<cate>Entertainment<diff>medium<imp>high<exp_min>120<deadline>1440"
   },
   {
-    "prompt": "Plan a day trip to a nearby hiking trail and pack a picnic",
-    "result": "<sum>Plan a day trip to a nearby hiking trail<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Outdoor<diff>medium<imp>medium<exp_min>180<deadline>null"
+    "input_text": "Plan a day trip to a nearby hiking trail and pack a picnic",
+    "target_text": "<sum>Plan a day trip to a nearby hiking trail<totd>morning<spec_time>null<prio>medium<status>not completed<cate>Outdoor<diff>medium<imp>medium<exp_min>180<deadline>null"
   },
   {
-    "prompt": "Start a journal to document your daily experiences",
-    "result": "<sum>Start a journal<totd>evening<spec_time>null<prio>low<status>not completed<cate>Self-improvement<diff>easy<imp>medium<exp_min>15<deadline>null"
+    "input_text": "Start a journal to document your daily experiences",
+    "target_text": "<sum>Start a journal<totd>evening<spec_time>null<prio>low<status>not completed<cate>Self-improvement<diff>easy<imp>medium<exp_min>15<deadline>null"
   },
   {
-    "prompt": "Attend a local art class and try painting or drawing",
-    "result": "<sum>Attend a local art class<totd>afternoon<spec_time>3:00 PM<prio>medium<status>not completed<cate>Creative<diff>medium<imp>medium<exp_min>120<deadline>1080"
+    "input_text": "Attend a local art class and try painting or drawing",
+    "target_text": "<sum>Attend a local art class<totd>afternoon<spec_time>3:00 PM<prio>medium<status>not completed<cate>Creative<diff>medium<imp>medium<exp_min>120<deadline>1080"
   },
   {
-    "prompt": "Plan a weekend road trip to a nearby town or city",
-    "result": "<sum>Plan a weekend road trip<totd>morning<spec_time>null<prio>high<status>not completed<cate>Travel<diff>hard<imp>high<exp_min>240<deadline>2880"
+    "input_text": "Plan a weekend road trip to a nearby town or city",
+    "target_text": "<sum>Plan a weekend road trip<totd>morning<spec_time>null<prio>high<status>not completed<cate>Travel<diff>hard<imp>high<exp_min>240<deadline>2880"
   },
   {
-    "prompt": "Learn to make your favorite dessert from scratch",
-    "result": "<sum>Learn to make your favorite dessert<totd>evening<spec_time>7:30 PM<prio>medium<status>not completed<cate>Cooking<diff>medium<imp>high<exp_min>90<deadline>720"
+    "input_text": "Learn to make your favorite dessert from scratch",
+    "target_text": "<sum>Learn to make your favorite dessert<totd>evening<spec_time>7:30 PM<prio>medium<status>not completed<cate>Cooking<diff>medium<imp>high<exp_min>90<deadline>720"
   }
 ]

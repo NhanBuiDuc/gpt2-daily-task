@@ -1,0 +1,6 @@
+[
+  {
+    "input_text": "Prepare presentation for tomorrow's conference",
+    "target_text": "<sum>Prepare presentation<totd>morning<spec_time>null<prio>high<status>not completed<cate>Work<diff>medium<imp>high<exp_min>120<deadline>1440"
+  }
+]
