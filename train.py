@@ -39,8 +39,7 @@ def train(dataset, model, max_length, temperature):
 
 def infer(entry, max_length):
     prompt = entry["prompt"]
-    input_text = f"<startofstring><startofprompt>{prompt}<endofpromt><endofstring>"
-    input_encoded = tokenizer(input_text, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
+    input_encoded = tokenizer(prompt, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
     input_ids = input_encoded['input_ids'].to("cuda")
     attention_mask = input_encoded['attention_mask'].to("cuda")
     
@@ -62,14 +61,14 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 custom_tokens = [
     "<startofprompt>", "<startoftask>",
     "<endofpromt>", "<endoftask>", 
-    'sum', 'cate', 'prio', 'diff', 'imp', 'status', 'exp_min', 
-    'totd', 'spec_time', 'dow', 'day', 'month', 'no_date', 'no_week', 'no_month'
+    '<sum>', '<cate>', '<prio>', '<diff>', '<imp>', '<status>', '<exp_min>', 
+    '<totd>', '<spec_time>', '<dow>', '<day>', '<month>', '<no_date>', '<no_week>', '<no_month>'
 ]
 
 special_tokens = {
     "pad_token": "<pad>",
-    "bos_token": "<startofstring>",
-    "eos_token": "<endofstring>",
+    "bos_token": "<sot>",
+    "eos_token": "<eot>",
     "additional_special_tokens": custom_tokens
 }
 
@@ -82,7 +81,7 @@ model.resize_token_embeddings(len(tokenizer))
 model = model.to(device)
 
 dailyTaskDataset = PromptResultMergedDataset("./daily_task_data.json", tokenizer)
-dailyTaskDataLoader = DataLoader(dailyTaskDataset, batch_size=20)
+dailyTaskDataLoader = DataLoader(dailyTaskDataset, batch_size=64)
 
 model.train()
 

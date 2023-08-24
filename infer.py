@@ -1,16 +1,16 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
-# Load custom vocabulary and tokens
 custom_tokens = [
-    "<startofprompt>", "<startoftask>", "<endofpromt>", "<endoftask>",
-    "<sum>", "<totd>", "<spec_time>", "<prio>", "<status>", "<cate>",
-    "<diff>", "<imp>", "<exp_min>", "<deadline>"
+    "<startofprompt>", "<startoftask>",
+    "<endofpromt>", "<endoftask>", 
+    '<sum>', '<cate>', '<prio>', '<diff>', '<imp>', '<status>', '<exp_min>', 
+    '<totd>', '<spec_time>', '<dow>', '<day>', '<month>', '<no_date>', '<no_week>', '<no_month>'
 ]
 
 special_tokens = {
     "pad_token": "<pad>",
-    "bos_token": "<startofstring>",
-    "eos_token": "<endofstring>",
+    "bos_token": "<sot>",
+    "eos_token": "<eot>",
     "additional_special_tokens": custom_tokens
 }
 
