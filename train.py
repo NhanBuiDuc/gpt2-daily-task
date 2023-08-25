@@ -39,7 +39,8 @@ def train(dataset, model, max_length, temperature):
 
 def infer(entry, max_length):
     prompt = entry["prompt"]
-    input_encoded = tokenizer(prompt, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
+    input_text = f"<sot><startofprompt>{prompt}<endofpromt>"
+    input_encoded = tokenizer(input_text, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
     input_ids = input_encoded['input_ids'].to("cuda")
     attention_mask = input_encoded['attention_mask'].to("cuda")
     
@@ -80,7 +81,7 @@ model.resize_token_embeddings(len(tokenizer))
 
 model = model.to(device)
 
-dailyTaskDataset = PromptResultMergedDataset("./daily_task_data.json", tokenizer)
+dailyTaskDataset = PromptResultMergedDataset("./data2.json", tokenizer)
 dailyTaskDataLoader = DataLoader(dailyTaskDataset, batch_size=64)
 
 model.train()

@@ -1,45 +1,45 @@
 from torch.utils.data import Dataset
 import json
 
-class DailyTaskData(Dataset):
-    def __init__(self, path:str, tokenizer):
-        self.data = json.load(open(path, "r"))
-        self.tokenizer = tokenizer
+# class DailyTaskData(Dataset):
+#     def __init__(self, path:str, tokenizer):
+#         self.data = json.load(open(path, "r"))
+#         self.tokenizer = tokenizer
 
-    def __len__(self):
-        return len(self.data)
+#     def __len__(self):
+#         return len(self.data)
 
-    def __getitem__(self, idx):
-        entry = self.data[idx]
-        prompt = entry['prompt']
-        result_str = entry['result']
+#     def __getitem__(self, idx):
+#         entry = self.data[idx]
+#         prompt = entry['prompt']
+#         result_str = entry['result']
         
-        # Add start and end of string tokens to the prompt and result strings
-        prompt = "<startofstring><startofprompt>" + prompt + "<endofpromt><endofstring>"
+#         # Add start and end of string tokens to the prompt and result strings
+#         prompt = "<startofstring><startofprompt>" + prompt + "<endofpromt><endofstring>"
 
-        result_str = "<startofstring><startoftask>" + result_str + "<endoftask><endofstring>"
-        input_encoded = self.tokenizer(prompt, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
-        output_encoded = self.tokenizer(result_str, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
+#         result_str = "<startofstring><startoftask>" + result_str + "<endoftask><endofstring>"
+#         input_encoded = self.tokenizer(prompt, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
+#         output_encoded = self.tokenizer(result_str, max_length=100, truncation=True, padding="max_length", return_tensors="pt")
 
-        input_ids = input_encoded['input_ids']
-        attention_mask = input_encoded['attention_mask']
-        labels = output_encoded['input_ids']
+#         input_ids = input_encoded['input_ids']
+#         attention_mask = input_encoded['attention_mask']
+#         labels = output_encoded['input_ids']
 
-        return (input_ids, attention_mask, labels)
+#         return (input_ids, attention_mask, labels)
 
-    def _parse_result_string(self, result_str):
-        result_dict = {}
-        parts = result_str.split("<")
-        for part in parts[1:]:
-            key, value = part.split(">")
-            result_dict[key] = value
-        return result_dict
+#     def _parse_result_string(self, result_str):
+#         result_dict = {}
+#         parts = result_str.split("<")
+#         for part in parts[1:]:
+#             key, value = part.split(">")
+#             result_dict[key] = value
+#         return result_dict
 
-    def _create_result_string(self, result_dict):
-        result_str = ""
-        for key, value in result_dict.items():
-            result_str += f"<{key}>{value}"
-        return result_str
+#     def _create_result_string(self, result_dict):
+#         result_str = ""
+#         for key, value in result_dict.items():
+#             result_str += f"<{key}>{value}"
+#         return result_str
     
 class PromptResultMergedDataset(Dataset):
     def __init__(self, path:str, tokenizer):
@@ -53,7 +53,7 @@ class PromptResultMergedDataset(Dataset):
         entry = self.data[idx]
         prompt = entry['input_text']
         target = entry['target_text']
-        merge = "<startofstring>" + prompt + target + "<endofstring>"
+        merge = "<sot>"+ "<startofprompt>" + prompt + "<endofpromt>" + "<startoftask>" + target + "<endoftask>" + "<eot>"
         # Encode the prompt
         input_encoding = self.tokenizer(
             prompt,
