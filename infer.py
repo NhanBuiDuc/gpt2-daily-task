@@ -1,16 +1,16 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import torch
-# Load custom vocabulary and tokens
 custom_tokens = [
-    "<startofprompt>", "<startoftask>", "<endofpromt>", "<endoftask>",
-    "<sum>", "<totd>", "<spec_time>", "<prio>", "<status>", "<cate>",
-    "<diff>", "<imp>", "<exp_min>", "<deadline>"
+    "<startofprompt>", "<startoftask>",
+    "<endofpromt>", "<endoftask>", 
+    '<sum>', '<cate>', '<prio>', '<diff>', '<imp>', '<status>', '<exp_min>', 
+    '<totd>', '<spec_time>', '<dow>', '<day>', '<month>', '<no_date>', '<no_week>', '<no_month>'
 ]
 
 special_tokens = {
     "pad_token": "<pad>",
-    "bos_token": "<startofstring>",
-    "eos_token": "<endofstring>",
+    "bos_token": "<sot>",
+    "eos_token": "<eot>",
     "additional_special_tokens": custom_tokens
 }
 
@@ -23,17 +23,18 @@ model = GPT2LMHeadModel.from_pretrained("gpt2")
 model.resize_token_embeddings(len(tokenizer))
 
 # Load trained model state
-model.load_state_dict(torch.load("./output/checkpoint-710/pytorch_model.bin", map_location=torch.device('cuda')))
+model.load_state_dict(torch.load("./output/checkpoint-468200/pytorch_model.bin", map_location=torch.device('cuda')))
+# model.load_state_dict(torch.load("./checkpoint-650/pytorch_model.bin", map_location=torch.device('cuda')))
 model.eval()
 
 # Example usage
 input_entry = {
-    "prompt": "Prepare presentation for tomorrow's conference",
+    "prompt": "Remind me to call my mom tonight 10 pm",
 }
 
 def infer(entry, max_length):
     prompt = entry["prompt"]
-    input_text = "<startofstring>" + prompt # Use the raw prompt string
+    input_text = f"<sot><startofprompt>{prompt}<endofpromt>"
     input_encoded = tokenizer(input_text, max_length=200, truncation=False, return_tensors="pt")
     input_ids = input_encoded['input_ids'].to(device)  # Move to the appropriate device
     attention_mask = input_encoded['attention_mask'].to(device)  # Move to the appropriate device
@@ -56,7 +57,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
 input_entry = {
-    "prompt": "Prepare presentation for tomorrow's conference",
+    "prompt": "I want to gaming for 3 hour after tomorow morning",
 }
 
 max_length = 100  # Adjust this value
