@@ -57,7 +57,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
 input_entry = {
-    "prompt": "Prepare presentation for tomorrow's conference",
+    "prompt": "I want to gaming for 3 hour after tomorow morning",
 }
 
 max_length = 100  # Adjust this value

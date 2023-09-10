@@ -1,10 +1,7 @@
-from transformers import GPT2Tokenizer
+import datetime
 
-# Load the GPT-2 tokenizer
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+minutes = 240
+hours = minutes // 60
+remainder_minutes = minutes % 60
 
-# Encode the time "10:00:00" using the tokenizer
-time_text = "10:00:00"
-time_token_ids = tokenizer.encode(time_text, add_special_tokens=False)
-
-print("Token IDs for '10:00:00':", time_token_ids)
+time_object = datetime.time(hours, remainder_minutes)
