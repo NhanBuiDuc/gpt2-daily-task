@@ -1,5 +1,5 @@
 def find_and_replace(original_string, target_string, replace_string, replace_mode):
-    assert(replace_mode in ["first", "all"]), print(r"Only support for \'first\' mode or \'all\' mode")
+    assert(replace_mode in ["first", "all"]), r"Only support for 'first' mode or 'all' mode"
     max_len = 20000
     Z = [0 for i in range(max_len)] 
 
