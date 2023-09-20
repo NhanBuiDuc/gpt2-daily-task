@@ -90,7 +90,7 @@
       "description": "Token đơn thuộc command",
       "token": [
         {
-          "value": "<action>",
+          "value": "<act>",
           "attribute": "action",
           "description": "Các action bao gồm thêm, xóa, cập nhật, query, notify"
         },
