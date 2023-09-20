@@ -3,22 +3,22 @@
     "description": "Level 1: Không bị chứa bởi tag nào, chỉ được chứa bởi <bos> và <eos> gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi token đôi: task có bắt đầu và kết thúc",
     "token": [
       {
-        "value": "<bp>",
+        "value": "<p>",
         "attribute": "begin_prompt",
         "description": "Bắt đầu của input"
       },
       {
-        "value": "<ep>",
+        "value": "</p>",
         "attribute": "end_prompt",
         "description": "Kết thúc của input"
       },
       {
-        "value": "<bcl>",
+        "value": "<cl>",
         "attribute": "begin_command_list",
         "description": "Bắt đầu của danh sách lệnh"
       },
       {
-        "value": "<ecl>",
+        "value": "</cl>",
         "attribute": "end_command_list",
         "description": "Kết thúc của danh sách lệnh"
       }
@@ -28,42 +28,42 @@
     "description": "Level 2: Có thể bị chứa bởi tag level 1, gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi",
     "token": [
       {
-        "value": "<betl>",
+        "value": "<etl>",
         "attribute": "begin_existed_task_list",
         "description": "Bắt đầu của danh sách những task đã tồn tại, có trong cả input lẫn output"
       },
       {
-        "value": "<eetl>",
+        "value": "</etl>",
         "attribute": "end_existed_task_list",
         "description": "Kết thúc của danh sách những task đã tồn tại, có trong cả input lẫn output"
       },
       {
-        "value": "<st>",
+        "value": "<t>",
         "attribute": "start_task",
         "description": "Bắt đầu của công việc"
       },
       {
-        "value": "<et>",
+        "value": "</t>",
         "attribute": "end_task",
         "description": "Kết thúc của lệnh"
       },
       {
-        "value": "<bc>",
+        "value": "<c>",
         "attribute": "begin_command",
         "description": "Bắt đầu của lệnh"
       },
       {
-        "value": "<ec>",
+        "value": "</c>",
         "attribute": "end_command",
         "description": "Kết thúc của lệnh"
       },
       {
-        "value": "<bta>",
+        "value": "<ta>",
         "attribute": "begin_target_attribute",
         "description": "Bắt đầu thuộc tính của tác sử dụng command lên, theo sau là một special token"
       },
       {
-        "value": "<eta>",
+        "value": "</ta>",
         "attribute": "end_target_attribute",
         "description": "Kết thúc thuộc tính của tác sử dụng command lên, theo sau là một giá trị (token thường)"
       }
