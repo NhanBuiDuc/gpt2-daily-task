@@ -1,0 +1,185 @@
+{
+  "level_1": {
+    "description": "Level 1: Không bị chứa bởi tag nào, chỉ được chứa bởi <bos> và <eos> gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi token đôi: task có bắt đầu và kết thúc",
+    "token": [
+      {
+        "value": "<bp>",
+        "attribute": "begin_prompt",
+        "description": "Bắt đầu của input"
+      },
+      {
+        "value": "<ep>",
+        "attribute": "end_prompt",
+        "description": "Kết thúc của input"
+      },
+      {
+        "value": "<bcl>",
+        "attribute": "begin_command_list",
+        "description": "Bắt đầu của danh sách lệnh"
+      },
+      {
+        "value": "<ecl>",
+        "attribute": "end_command_list",
+        "description": "Kết thúc của danh sách lệnh"
+      }
+    ]
+  },
+  "level_2": {
+    "description": "Level 2: Có thể bị chứa bởi tag level 1, gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi",
+    "token": [
+      {
+        "value": "<betl>",
+        "attribute": "begin_existed_task_list",
+        "description": "Bắt đầu của danh sách những task đã tồn tại, có trong cả input lẫn output"
+      },
+      {
+        "value": "<eetl>",
+        "attribute": "end_existed_task_list",
+        "description": "Kết thúc của danh sách những task đã tồn tại, có trong cả input lẫn output"
+      },
+      {
+        "value": "<st>",
+        "attribute": "start_task",
+        "description": "Bắt đầu của công việc"
+      },
+      {
+        "value": "<et>",
+        "attribute": "end_task",
+        "description": "Kết thúc của lệnh"
+      },
+      {
+        "value": "<bc>",
+        "attribute": "begin_command",
+        "description": "Bắt đầu của lệnh"
+      },
+      {
+        "value": "<ec>",
+        "attribute": "end_command",
+        "description": "Kết thúc của lệnh"
+      },
+      {
+        "value": "<bta>",
+        "attribute": "begin_target_attribute",
+        "description": "Bắt đầu thuộc tính của tác sử dụng command lên, theo sau là một special token"
+      },
+      {
+        "value": "<eta>",
+        "attribute": "end_target_attribute",
+        "description": "Kết thúc thuộc tính của tác sử dụng command lên, theo sau là một giá trị (token thường)"
+      }
+    ]
+  },
+  "level_3": {
+    "description": "Level 3: Token đơn, chỉ chứa token thường",
+    "3.1": {
+      "description": "Token được sử dụng chung ở nhiều nơi",
+      "token": [
+        {
+          "value": "<id>",
+          "attribute": "id",
+          "description": "Id của task"
+        },
+        {
+          "value": "<time>",
+          "attribute": "time",
+          "description": "Thời gian format: hh:mm:ss"
+        }
+      ]
+    },
+    "3.2": {
+      "description": "Token đơn thuộc command",
+      "token": [
+        {
+          "value": "<action>",
+          "attribute": "action",
+          "description": "Các action bao gồm thêm, xóa, cập nhật, query, notify"
+        },
+        {
+          "value": "<query>",
+          "attribute": "query",
+          "description": "Thông tin cần tìm kiếm"
+        }
+      ]
+    },
+    "3.3": {
+      "description": "Token đơn thuộc task",
+      "token": [
+        {
+          "value": "<sum>",
+          "attribute": "summarize",
+          "description": "Tóm tắt"
+        },
+        {
+          "value": "<cate>",
+          "attribute": "category",
+          "description": "Loại công việc"
+        },
+        {
+          "value": "<prio>",
+          "attribute": "priority",
+          "description": "Độ ưu tiên, dựa theo deadline"
+        },
+        {
+          "value": "<diff>",
+          "attribute": "difficulty",
+          "description": "Độ khó, dựa vào độ khó tự động nhân bản công việc lên"
+        },
+        {
+          "value": "<imp>",
+          "attribute": "important",
+          "description": "Độ quan trọng, dựa theo tính chất của công việc để sắp xếp trước công việc cùng priority"
+        },
+        {
+          "value": "<status>",
+          "attribute": "status",
+          "description": "Done hoặc Not Done"
+        },
+        {
+          "value": "<exp_min>",
+          "attribute": "expected_minute",
+          "description": "Thời gian xấp xĩ"
+        },
+        {
+          "value": "<totd>",
+          "attribute": "time_of_the_day",
+          "description": "Buổi xấp xỉ trong ngày, dựa theo tính chất công việc"
+        },
+        {
+          "value": "<spec_time>",
+          "attribute": "specific_time",
+          "description": "Thời gian cứng được người dùng cho trước"
+        },
+        {
+          "value": "<dow>",
+          "attribute": "day_of_week",
+          "description": "Ngày trong tuần"
+        },
+        {
+          "value": "<day>",
+          "attribute": "day_of_week",
+          "description": "Ngày cứng người dùng cho trước trong tháng hiện tại"
+        },
+        {
+          "value": "<month>",
+          "attribute": "day_of_week",
+          "description": "Tháng người dùng cho trước trong năm hiện tại"
+        },
+        {
+          "value": "<no_date>",
+          "attribute": "number_of_date",
+          "description": "Số ngày n+1 lặp lại của công việc, nếu bằng 0 thì lặp lại thêm 1 ngày"
+        },
+        {
+          "value": "<no_week>",
+          "attribute": "number_of_week",
+          "description": "Số tuần n+1 lặp lại của công việc, nếu bằng 0 thì lặp lại 1 tuần"
+        },
+        {
+          "value": "<no_month>",
+          "attribute": "number_of_month",
+          "description": "Số tháng n+1 lặp lại của công việc, nếu bằng 0 thì lặp lại trong vòng 1 tháng nhưng dựa theo độ khó của công việc"
+        }
+      ]
+    }
+  }
+}

@@ -5,42 +5,62 @@ from torch.utils.data import Dataset, DataLoader
 from transformers import Trainer as transformers_trainer, TrainingArguments
 from loss import TEALoss
 from dataset import DailyTaskDataset
-from model import TLTA
 import tqdm
+import json
+def special_tokens_from_annotation():
+    # Load the JSON file
+    with open('token_annotation.json', 'r', encoding='utf-8') as json_file:
+        data = json.load(json_file)
+
+    # Initialize an empty list to store the "value" strings
+    token_values = []
+
+    # Iterate through the levels and tokens
+    for level_key, level_data in data.items():
+        if level_key == 'level_3':
+            for sub_level_key, sub_level_data in level_data.items():
+                if sub_level_key == "3.1":
+                    for token_info in sub_level_data["token"]:
+                        token_values.append(token_info["value"])
+                if sub_level_key == "3.2":
+                    for token_info in sub_level_data["token"]:
+                        token_values.append(token_info["value"])
+                if sub_level_key == "3.3":
+                    for token_info in sub_level_data["token"]:
+                        token_values.append(token_info["value"])
+        else:
+            for token_info in level_data["token"]:
+                token_values.append(token_info["value"])
+
+    # Print the list of "value" strings
+    print(token_values)
+    return(token_values)
+
 class Trainer:
     def __init__(self, batch_size=1, learning_rate=1e-4):
-
+        self.batch_size = batch_size
+        self.learning_rate = learning_rate
         self.target_texts = [
             "<sum>Prepare presentation for 18 this month<cate>Work<prio>3<diff>4<imp>4<status>0<exp_min>120<totd>2<spec_time>null<dow>null<day>18<month>null<no_date>null<no_week>null<no_month>0",
             "<sum>Finish coding assignment before tommorow<cate>Study<prio>2<diff>1<imp>1<status>0<exp_min>180<totd>4<spec_time>null<dow>null<day>null<month>null<no_date>1<no_week>null<no_month>null",
             "<sum>Buy groceries in Thursday<cate>Errands<prio>5<diff>5<imp>3<status>0<exp_min>60<totd>3<spec_time>null<dow>5<day>null<month>null<no_date>null<no_week>null<no_month>null"
         ]
-        self.custom_tokens = [
-            "<startofprompt>", "<startoftask>",
-            "<endofpromt>", "<endoftask>",
-            "<time>", "<id>",
-            'sum', 'cate', 'prio', 'diff', 'imp', 'status', 'exp_min', 
-            'totd', 'spec_time', 'dow', 'day', 'month', 'no_date', 'no_week', 'no_month'
-        ]
 
+        self.custom_tokens = special_tokens_from_annotation()
         self.special_tokens = {
             "pad_token": "<pad>",
-            "bos_token": "<startofstring>",
-            "eos_token": "<endofstring>",
-            "mask_token": "<mask>",  # Make sure you add mask_token
+            "bos_token": "<bos>",
+            "eos_token": "<eos>",
             "additional_special_tokens": self.custom_tokens
         }
-        TLTA_tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-        TLTA_tokenizer.add_special_tokens(self.special_tokens)
-        self.tokenizer = TLTA_tokenizer 
+        
+        tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+        tokenizer.add_special_tokens(self.special_tokens)
+        self.tokenizer = tokenizer
+
         gpt2_model = GPT2LMHeadModel.from_pretrained("gpt2")
         gpt2_model.resize_token_embeddings(len(self.tokenizer))
-
-        self.model = TLTA(gpt2_model, self.tokenizer)
-        self.loss = TEALoss(self.tokenizer, self.model)
-        self.train_dataset = DailyTaskDataset(self.target_texts, TLTA_tokenizer)
-        self.batch_size = batch_size
-        self.learning_rate = learning_rate
+        self.train_dataset = DailyTaskDataset(self.target_texts, self.tokenizer)
 
     def train(self, num_epochs=10):
         optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
