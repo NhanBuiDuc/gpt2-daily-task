@@ -76,12 +76,13 @@ special_tokens = {
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 tokenizer.add_special_tokens(special_tokens)
 
-model = GPT2LMHeadModel.from_pretrained(r"H:\gpt2-project\output\checkpoint-468200")
+model = GPT2LMHeadModel.from_pretrained("gpt2")
 model.resize_token_embeddings(len(tokenizer))
 
 model = model.to(device)
 
-dailyTaskDataset = PromptResultMergedDataset("./data2.json", tokenizer)
+dailyTaskDataset = PromptResultMergedDataset(
+    "./data/single-task-data.json", tokenizer)
 dailyTaskDataLoader = DataLoader(dailyTaskDataset, batch_size=64)
 
 model.train()
