@@ -1,16 +1,26 @@
 {
   "level_1": {
-    "description": "Level 1: Không bị chứa bởi tag nào, chỉ được chứa bởi <os> và </os> gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi token đôi: task có bắt đầu và kết thúc",
+    "description": "Level 1: Không bị chứa bởi tag nào, chỉ được chứa bởi <bos> và <eos> gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi token đôi: task có bắt đầu và kết thúc",
     "token": [
       {
-        "value": "<prompt>",
+        "value": "<p>",
         "attribute": "begin_prompt",
         "description": "Bắt đầu của input"
       },
       {
-        "value": "</prompt>",
+        "value": "</p>",
         "attribute": "end_prompt",
         "description": "Kết thúc của input"
+      },
+      {
+        "value": "<cl>",
+        "attribute": "begin_command_list",
+        "description": "Bắt đầu của danh sách lệnh"
+      },
+      {
+        "value": "</cl>",
+        "attribute": "end_command_list",
+        "description": "Kết thúc của danh sách lệnh"
       }
     ]
   },
@@ -18,20 +28,80 @@
     "description": "Level 2: Có thể bị chứa bởi tag level 1, gồm có 2 phần bắt đầu và kết thúc, chứa nhiều hơn 1 token đôi",
     "token": [
       {
-        "value": "<task>",
+        "value": "<etl>",
+        "attribute": "begin_existed_task_list",
+        "description": "Bắt đầu của danh sách những task đã tồn tại, có trong cả input lẫn output"
+      },
+      {
+        "value": "</etl>",
+        "attribute": "end_existed_task_list",
+        "description": "Kết thúc của danh sách những task đã tồn tại, có trong cả input lẫn output"
+      },
+      {
+        "value": "<t>",
         "attribute": "start_task",
         "description": "Bắt đầu của công việc"
       },
       {
-        "value": "</task>",
+        "value": "</t>",
         "attribute": "end_task",
         "description": "Kết thúc của lệnh"
+      },
+      {
+        "value": "<c>",
+        "attribute": "begin_command",
+        "description": "Bắt đầu của lệnh"
+      },
+      {
+        "value": "</c>",
+        "attribute": "end_command",
+        "description": "Kết thúc của lệnh"
+      },
+      {
+        "value": "<ta>",
+        "attribute": "begin_target_attribute",
+        "description": "Bắt đầu thuộc tính của tác sử dụng command lên, theo sau là một special token"
+      },
+      {
+        "value": "</ta>",
+        "attribute": "end_target_attribute",
+        "description": "Kết thúc thuộc tính của tác sử dụng command lên, theo sau là một giá trị (token thường)"
       }
     ]
   },
   "level_3": {
     "description": "Level 3: Token đơn, chỉ chứa token thường",
     "3.1": {
+      "description": "Token được sử dụng chung ở nhiều nơi",
+      "token": [
+        {
+          "value": "<id>",
+          "attribute": "id",
+          "description": "Id của task"
+        },
+        {
+          "value": "<time>",
+          "attribute": "time",
+          "description": "Thời gian format: hh:mm:ss"
+        }
+      ]
+    },
+    "3.2": {
+      "description": "Token đơn thuộc command",
+      "token": [
+        {
+          "value": "<act>",
+          "attribute": "action",
+          "description": "Các action bao gồm thêm, xóa, cập nhật, query, notify"
+        },
+        {
+          "value": "<query>",
+          "attribute": "query",
+          "description": "Thông tin cần tìm kiếm"
+        }
+      ]
+    },
+    "3.3": {
       "description": "Token đơn thuộc task",
       "token": [
         {
