@@ -138,21 +138,21 @@
 "input_text": "Assistant, remind me that I had a dentist appointment on June 15th at 9 am.",
 "target_text": "<sum>Have dentist appointment<totd>3<spec_time>09:00:00<prio>4<status>1<cate>personal<diff>3<imp>4<exp_min>60<dow>null<day>15<month>6<no_date>null<no_week>null<no_month>null"
 },
-{
-"describe" : "Task with a specific day and time in the future with a notification reminder:",
-"input_text": "Remind me to submit the report on October 1st at 5 pm and notify me 1 hour in advance.",
-"target_text": "<sum>Submit report<totd>3<spec_time>17:00:00<prio>4<status>0<cate>work<diff>3<imp>5<exp_min>60<dow>null<day>1<month>10<no_date>null<no_week>null<no_month>null<reminder>60"
-},
+// {
+// "describe" : "Task with a specific day and time in the future with a notification reminder:",
+// "input_text": "Remind me to submit the report on October 1st at 5 pm and notify me 1 hour in advance.",
+// "target_text": "<sum>Submit report<totd>3<spec_time>17:00:00<prio>4<status>0<cate>work<diff>3<imp>5<exp_min>60<dow>null<day>1<month>10<no_date>null<no_week>null<no_month>null<reminder>60"
+// },
 {
 "describe" : "Task with a specific day and time in the future and a recurring pattern:",
 "input_text": "Remind me to water the plants every Sunday at 10 am starting from next week.",
 "target_text": "<sum>Water plants<totd>2<spec_time>10:00:00<prio>3<status>0<cate>personal<diff>1<imp>3<exp_min>15<dow>0<day>null<month>null<no_date>1<no_week>null<no_month>null"
 },
-{
-"describe" : "Task with a specific location:",
-"input_text": "Remind me to buy groceries when I am near the supermarket.",
-"target_text": "<sum>Buy groceries<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>45<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><location>supermarket"
-},
+// {
+// "describe" : "Task with a specific location:",
+// "input_text": "Remind me to buy groceries when I am near the supermarket.",
+// "target_text": "<sum>Buy groceries<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>45<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><location>supermarket"
+// },
 {
 "describe" : "Task with a specific duration:",
 "input_text": "Set a reminder to work on the project for 2 hours tomorrow.",
@@ -173,51 +173,51 @@
 "input_text": "Assistant, remind me to submit the report by Friday at 5 pm.",
 "target_text": "<sum>Submit report<totd>3<spec_time>17:00:00<prio>4<status>0<cate>work<diff>1<imp>5<exp_min>60<dow>4<day>null<month>null<no_date>null<no_week>null<no_month><deadline>Friday at 5 pm"
 },
-{
-"describe" : "Task with a specific category or project label:",
-"input_text": "Remind me to review the marketing campaign for Project X.",
-"target_text": "<sum>Review marketing campaign<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><category>Project X"
-},
+// {
+// "describe" : "Task with a specific category or project label:",
+// "input_text": "Remind me to review the marketing campaign for Project X.",
+// "target_text": "<sum>Review marketing campaign<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><category>Project X"
+// },
 {
 "describe" : "Task with a specific recurring pattern and duration:",
 "input_text": "Set a reminder to exercise for 30 minutes every Monday, Wednesday, and Friday.",
 "target_text": "<sum>Exercise<totd>2<spec_time>null<prio>3<status>0<cate>personal<diff>1<imp>3<exp_min>30<dow>1,3,5<day>null<month>null<no_date>1<no_week>null<no_month><duration>30 minutes"
 },
-{
-"describe" : "Task with a specific tag or label for organization:",
-"input_text": "Assistant, remind me to complete the 'Financial Report' task with the 'Urgent' tag.",
-"target_text": "<sum>Complete Financial Report<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>60<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><tag>Urgent"
-},
-{
-"describe" : "Task with a specific subtask or checklist:",
-"input_text": "Remind me to pack for the trip: clothes, toiletries, travel documents, and snacks.",
-"target_text": "<sum>Pack for trip<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><subtask>clothes, toiletries, travel documents, snacks"
-},
+// {
+// "describe" : "Task with a specific tag or label for organization:",
+// "input_text": "Assistant, remind me to complete the 'Financial Report' task with the 'Urgent' tag.",
+// "target_text": "<sum>Complete Financial Report<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>60<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><tag>Urgent"
+// },
+// {
+// "describe" : "Task with a specific subtask or checklist:",
+// "input_text": "Remind me to pack for the trip: clothes, toiletries, travel documents, and snacks.",
+// "target_text": "<sum>Pack for trip<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><subtask>clothes, toiletries, travel documents, snacks"
+// },
 {
 "describe" : "Task with a specific collaboration or sharing feature:",
-"input_text": "Assistant, remind me to share the presentation with the team before the meeting.",
-"target_text": "<sum>Share presentation<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>15<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><collaboration>Team"
+"input_text": "Assistant, remind me to share the presentation with the team before the meeting at 8 am.",
+"target_text": "<sum>Share presentation<totd>2<spec_time>08:00:00<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>15<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><collaboration>Team"
 },
 {
 "describe" : "Task with a specific attachment or file:",
 "input_text": "Remind me to send the report to John with the attached document.",
-"target_text": "<sum>Send report to John<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>15<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><attachment>Document"
+"target_text": "<sum>Send report to John<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>15<dow>null<day>null<month>null<no_date>null<no_week>null<no_month>"
 },
-{
-"describe" : "Task with a specific energy level or mood:",
-"input_text": "Set a reminder to practice guitar when I'm feeling energetic.",
-"target_text": "<sum>Practice guitar<totd>2<spec_time>null<prio>3<status>0<cate>personal<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><energy>High"
-},
+// {
+// "describe" : "Task with a specific energy level or mood:",
+// "input_text": "Set a reminder to practice guitar when I'm feeling energetic.",
+// "target_text": "<sum>Practice guitar<totd>2<spec_time>null<prio>3<status>0<cate>personal<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><energy>High"
+// },
 {
 "describe" : "Task with a specific time zone or location context:",
 "input_text": "Remind me to call the office when it's 9 am Eastern Time.",
 "target_text": "<sum>Call office<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>10<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><timezone>Eastern Time"
 },
-{
-"describe" : "Task with a specific dependency or prerequisite:",
-"input_text": "Assistant, remind me to book a hotel once the flight tickets are confirmed.",
-"target_text": "<sum>Book hotel<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>20<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><dependency>Flight tickets confirmed"
-},
+// {
+// "describe" : "Task with a specific dependency or prerequisite:",
+// "input_text": "Assistant, remind me to book a hotel once the flight tickets are confirmed.",
+// "target_text": "<sum>Book hotel<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>20<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><dependency>Flight tickets confirmed"
+// },
 {
 "describe" : "Task with a specific level of effort or complexity:",
 "input_text": "Remind me to solve the challenging math problem tonight.",
@@ -233,11 +233,11 @@
 "input_text": "Remind me to pick up my dry cleaning with high priority.",
 "target_text": "<sum>Pick up dry cleaning<totd>2<spec_time>null<prio>5<status>0<cate>personal<diff>2<imp>4<exp_min>15<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><location>Dry cleaner<priority>high"
 },
-{
-"describe" : "Task with a specific duration and energy level:",
-"input_text": "Set a reminder to work on the project for 2 hours when I'm feeling motivated.",
-"target_text": "<sum>Work on project<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>1<imp>4<exp_min>120<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><duration>2 hours<energy>High"
-},
+// {
+// "describe" : "Task with a specific duration and energy level:",
+// "input_text": "Set a reminder to work on the project for 2 hours when I'm feeling motivated.",
+// "target_text": "<sum>Work on project<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>1<imp>4<exp_min>120<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><duration>2 hours<energy>High"
+// },
 {
 "describe" : "Task with a specific category and subtask:",
 "input_text": "Assistant, remind me to buy groceries and also get milk, eggs, and bread.",
@@ -248,11 +248,11 @@
 "input_text": "Remind me to prepare for the meeting with the 'Important' tag. Also, review the sales figures.",
 "target_text": "<sum>Prepare for meeting<totd>2<spec_time>null<prio>4<status>0<cate>work<diff>2<imp>4<exp_min>30<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><tag>Important<notes>Review sales figures"
 },
-{
-"describe" : "Task with a specific context or environment:",
-"input_text": "Remind me to water the plants when I'm at home.",
-"target_text": "<sum>Water plants<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>10<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><context>At home"
-},
+// {
+// "describe" : "Task with a specific context or environment:",
+// "input_text": "Remind me to water the plants when I'm at home.",
+// "target_text": "<sum>Water plants<totd>2<spec_time>null<prio>4<status>0<cate>personal<diff>2<imp>4<exp_min>10<dow>null<day>null<month>null<no_date>null<no_week>null<no_month><context>At home"
+// },
 {
 "describe" : "Task with a specific skill or expertise requirement:",
 "input_text": "Set a reminder to review the coding guidelines for the new project.",
