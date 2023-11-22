@@ -28,8 +28,8 @@ class Task:
         self.priority = prio
         self.status = status
         self.category = cate
-        self.difficulty = diff
-        self.importance = imp
+        self.difficulty = diff  #
+        self.importance = imp   #
         self.expected_minutes = exp_min
         self.day_of_week = dow
         self.day = day
